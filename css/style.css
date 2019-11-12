@@ -1,0 +1,56 @@
+section {
+    background-color: #303132;
+    border-radius: 10px;
+    padding: 25px;
+    width: 500px;
+    margin: 25px auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.459);
+
+
+}
+
+body {
+    background: rgb(96, 151, 223);
+    font: normal 15pt Arial;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#calc{
+    text-align: center;
+    
+}
+#res{
+    background-color: white;
+    width: 150px;
+    
+    
+    margin: auto;
+    margin-top: 30px;
+
+}    
+    #resmult{
+        background-color: white;
+        width: 150px;
+        margin: 10px auto;
+        margin-top: 10px;
+    
+ 
+}
+
+h3{
+    color: white;
+}
+
+#add{
+    color: white;
+}
+#tab{
+    text-align: center;
+    color: white;
+    margin: 20px;
+
+}
