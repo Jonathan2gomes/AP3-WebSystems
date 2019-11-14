@@ -42,3 +42,27 @@ function mu(){
     }
     }
 }
+
+function test(){
+    var vetor = [];
+    var a = window.document.getElementById('ressort');
+    for (var i = 0; i<3; i++){
+    vetor += window.prompt("Write a number", "Here");
+
+}
+window.alert(`Organized numbers: ${vetor}`);
+}
+
+function writeee(){
+    var a = window.document.getElementById('nsort');
+    var res2 = window.document.getElementById('tab2');
+       var num = Number(a.value)
+    res2.innerText += ` ${num}`;
+
+    for (var i = 0; i <10; i++){
+    var j = [];
+    j[i] = num;
+    }
+    
+
+}
