@@ -44,25 +44,48 @@ function mu(){
 }
 
 function test(){
-    var vetor = [];
-    var a = window.document.getElementById('ressort');
-    for (var i = 0; i<3; i++){
-    vetor += window.prompt("Write a number", "Here");
+    var vetor = new Array();
+    var a = window.document.getElementById('tab2');
+    for (var j = 0; j<10; j++){
+    vetor[j] = Number(window.prompt(`Write a number in position ${j}`));
 
 }
-window.alert(`Organized numbers: ${vetor}`);
+
+    for (var i = 0; i < vetor.length; i++) {
+        for (var k = i; k > 0 && vetor[k] < vetor[k-1]; k--){
+            var aux = vetor[k-1];
+            vetor[k-1] = vetor[k];
+            vetor[k] = aux;
+        }
+    }
+
+// window.alert(`Organized numbers: ${vetor}`);
+a.innerHTML = `Organized numbers: ${vetor}`
 }
 
 function writeee(){
     var a = window.document.getElementById('nsort');
     var res2 = window.document.getElementById('tab2');
        var num = Number(a.value)
+    var con = window.document.getElementById('cont');   
     res2.innerText += ` ${num}`;
 
-    for (var i = 0; i <10; i++){
+    var i = 0;
+    
+    var a = a+1;
+    
+    i++;
     var j = [];
     j[i] = num;
-    }
-    
+    con.innerText += ` ${a}`;
+   
 
 }
+
+function write2(){
+    var vetor = new Array();
+    for (var i = 0; i<10; i++){
+    window.document.getElementById('oi').innerText = `Digite o ${i}° numero: `
+    }
+}
+
