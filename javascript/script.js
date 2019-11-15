@@ -89,3 +89,23 @@ function write2(){
     }
 }
 
+
+function show(){
+
+   // var btn = window.document.getElementById('options');
+    
+    window.document.getElementById('hidden').style.display ='block';
+
+
+
+}
+function  calc2(){
+    var n1 = Number(window.document.getElementById('num1').value);
+    var n2 = Number(window.document.getElementById('num2').value);
+
+    if (n1 ==0 || n2 == 0 ){
+    window.alert('Please, enter valid numbers')
+} else { 
+    
+}
+}

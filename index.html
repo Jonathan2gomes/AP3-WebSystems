@@ -63,9 +63,6 @@
         <div id="tab2"></div>
         
 
-       <!--  <select name="numbers" id="ressort" size="10">
-
-        </select> -->
 
    
         
@@ -77,17 +74,20 @@
 <div id="layer"></div>
     <form id="calc">
         
-        <h3 id="oi">Click the button below to enter 10 numbers and sort them</h3>  
-       
+        <h3 id="oi">Enter 2 numbers</h3>  
+       <input type="number" id="num1"> 
+       <input type="number" id="num2" onkeyup="show()"> 
     
-        <input type="button" id="sort" value="Enter Numbers" onclick="test()">
+       <div id="hidden" class="hidden"> 
+        <input type="button" id="ad" value="Sum" onclick="sum()">
+        <input type="button" id="sub" value="Sub" onclick="sum()">
+        <input type="button" id="mult" value="Multiplication" onclick="sum()">
+        <input type="button" id="divi" value="Division" onclick="sum()">
         <br>
-        <div id="tab2"></div>
-        
+        <div id="options"></div>
+        </div>  
 
-       <!--  <select name="numbers" id="ressort" size="10">
-
-        </select> -->
+     
 
    
         
