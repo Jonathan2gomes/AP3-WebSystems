@@ -33,7 +33,7 @@ function mu(){
         } else{
             var nmult = Number(num.value);
     a.innerHTML = '';
-    for (var i = 0; i<10; i++){
+    for (var i = 0; i<11; i++){
         var op = document.createElement('option');
         var s = nmult * i;
         
@@ -99,13 +99,44 @@ function show(){
 
 
 }
-function  calc2(){
+
+function sum(){
     var n1 = Number(window.document.getElementById('num1').value);
     var n2 = Number(window.document.getElementById('num2').value);
+    var r = n1 + n2;
+    window.document.getElementById('res4').innerText = `The result is ${r}`
 
-    if (n1 ==0 || n2 == 0 ){
-    window.alert('Please, enter valid numbers')
-} else { 
-    
+
 }
+
+function subt(){
+    var n1 = Number(window.document.getElementById('num1').value);
+    var n2 = Number(window.document.getElementById('num2').value);
+    var r = n1 - n2;
+    window.document.getElementById('res4').innerText = `The result is ${r}`
+
 }
+
+function mul(){
+    var n1 = Number(window.document.getElementById('num1').value);
+    var n2 = Number(window.document.getElementById('num2').value);
+    var r = n1 * n2;
+    window.document.getElementById('res4').innerText = `The result is ${r}`
+
+}
+
+function div(){
+    var n1 = Number(window.document.getElementById('num1').value);
+    var n2 = Number(window.document.getElementById('num2').value);
+        
+    if (n1 < n2){
+        alert('Numerator must be greater than the denominator');
+    } else{
+        var r = n1/n2;
+        window.document.getElementById('res4').innerText = `The result is ${r}`    
+    }
+}
+
+
+ 
+

@@ -64,4 +64,12 @@ h3{
 
 .hidden{
     display:none;
+    margin: 20px;
+}
+
+#res4{
+    color: white;
+    
+    margin: 10px auto;
+    margin-top: 10px;
 }
