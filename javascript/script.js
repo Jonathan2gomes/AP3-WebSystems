@@ -13,14 +13,14 @@ function sum(){
   
    if ( s == 100 ){
 
-    res.innerHTML = `O Valor  ${s} e igual a 100`;
+    res.innerHTML = `The number ${s} is equals to 100`;
 
    } else if( s > 100) {
 
-    res.innerHTML = `O Valor  ${s} e maior do que 100`;
+    res.innerHTML = `The number  ${s} is greater than 100`;
 
     } else {
-    res.innerHTML = `O Valor  ${s} eh menor que 100`;
+    res.innerHTML = `The number  ${s} is less than 100`;
 }
 }
 function mu(){
@@ -100,7 +100,7 @@ function show(){
 
 }
 
-function sum(){
+function sum2(){
     var n1 = Number(window.document.getElementById('num1').value);
     var n2 = Number(window.document.getElementById('num2').value);
     var r = n1 + n2;
