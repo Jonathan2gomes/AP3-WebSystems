@@ -65,6 +65,7 @@ h3{
 .hidden{
   /*  display:none; */
     margin: 20px;
+   
 }
 
 #res4{
@@ -75,14 +76,21 @@ h3{
 }
 
 .candidate{
-    
+ 
     width: 50;
-    height: 50;
+    
+
+  
     
 
 }
 
-#candidate1{
-    width: 50;
-    height: 50;
+img{
+    width: 140px;
+    height: 200px;
+}
+#hidden2{
+   
+    width: 500px;
+    display: flex;
 }
