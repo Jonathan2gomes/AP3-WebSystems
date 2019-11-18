@@ -75,7 +75,14 @@ h3{
 }
 
 .candidate{
-    display: inline;
-    margin: 25px auto;
+    
+    width: 50;
+    height: 50;
+    
 
+}
+
+#candidate1{
+    width: 50;
+    height: 50;
 }
