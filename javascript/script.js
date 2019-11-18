@@ -148,8 +148,23 @@ function show2(){
     }
 }
 
-function vote(voter){
-    
+function vote(vote){
+    var person = new Object();
+    person.voter = window.document.getElementById('voter').value;
+    person.vote = window.document.getElementById('vote1');
+
 }
  
+function convertTemp(){
+    
+    var f = Number(window.document.getElementById('temp').value);
+    var c =  ( ( f - 32 ) * 5 ) / 9
+    window.document.getElementById('res6').innerText = c.toFixed(2);
+   
 
+}
+
+function atkGoblin(){
+    var life = window.document.getElementById('hpgoblin');
+    
+}
