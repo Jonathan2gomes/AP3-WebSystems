@@ -163,8 +163,20 @@ function convertTemp(){
    
 
 }
-
+lf = 80;
 function atkGoblin(){
     var life = window.document.getElementById('hpgoblin');
+    var dmg = window.document.getElementById('damage');
+    var imgg = window.document.getElementById('imggoblin');
+    var atk = Math.floor(Math.random() * 10);
+    lf = lf - atk;
+  
+    life.innerText = lf;
+    dmg.innerText = atk;
+if(lf<20 && lf> 0){
+    imgg.src = 'img/goblin1'; 
+}else if(lf <=0){
+    imgg.src = 'img/goblin2';
+}
     
 }
