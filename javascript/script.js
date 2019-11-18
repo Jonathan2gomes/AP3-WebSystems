@@ -137,6 +137,19 @@ function div(){
     }
 }
 
+function show2(){
+    var a = window.document.getElementById('hidden2');
+    var b = window.document.getElementById('voter').value.length;
+    if (b != 5 ){
+        window.alert('Please enter a valid voter registration!');
+    } else {
+       a.style.display  = 'block';
+      
+    }
+}
 
+function vote(voter){
+    
+}
  
 
