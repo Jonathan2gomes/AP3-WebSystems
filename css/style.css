@@ -84,7 +84,7 @@ h3{
     width: 50;
 }
 
-img{
+.imgbasic{
     width: 140px;
     height: 200px;
 }
@@ -96,4 +96,8 @@ img{
 
 div{
     color: white;
+}
+
+#imgbackpack{
+    width: 500px;
 }

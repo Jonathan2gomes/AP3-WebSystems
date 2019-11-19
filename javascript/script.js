@@ -185,3 +185,18 @@ if(lf<20 && lf> 0){
 }
     
 }
+
+function addToBck(){
+    var b = window.document.getElementById('res8');
+    var a = new Array();
+    for (var i =1; i<6; i++){
+        a[i] = window.prompt(`Choose ${i}° item to carry`);
+    }
+    for (var j =1; j<6; j++){
+        if( a[j] =="key"){
+            b.innerText = `That's great! You got a key`;
+        } else {
+            b.innerText = `You don't have a key`;
+        }
+    }
+}
