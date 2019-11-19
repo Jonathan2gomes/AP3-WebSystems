@@ -137,34 +137,43 @@ function div(){
     }
 }
 
-function show2(){
-    var a = window.document.getElementById('candidate1');
-    var aa = window.document.getElementById('candidate2');
+function showcandidacts(){ 
+     a = window.document.getElementById('candidate1');
+     aa = window.document.getElementById('candidate2');
     var b = window.document.getElementById('voter').value.length;
+    
     if (b != 5 ){
         window.alert('Please enter a valid voter registration!');
+        a.style.display  = 'none';
+        aa.style.display  = 'none';
     } else {
        a.style.display  = 'block';
        aa.style.display  = 'block';
       
     }
 }
+vot1 = 0;
+function vt1(){
+    //window.alert('its working');
+    var im = window.document.getElementById('c1');
+    var resvt = window.document.getElementById('resvote');
+    vot1 ++;
+    resvt.innerText = vot1;
+    im.src = 'img/happy.jpg';
+    aa.style.display = 'none'
 
-function vote(vote){
-    var person = new Object();
-    person.voter = window.document.getElementById('voter').value;
-    person.vote = window.document.getElementById('vote1');
-
+    
 }
+
  
 function convertTemp(){
     
     var f = Number(window.document.getElementById('temp').value);
     var c =  ( ( f - 32 ) * 5 ) / 9
     window.document.getElementById('res6').innerText = c.toFixed(2);
-   
-
 }
+
+
 lf = 80;
 function atkGoblin(){
     var life = window.document.getElementById('hpgoblin');
