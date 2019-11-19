@@ -24,7 +24,7 @@ h1 {
     
 }
 #res{
-    background-color: white;
+    background-color: black;
     width: 150px;
     
     
@@ -63,7 +63,7 @@ h3{
 }
 
 .hidden{
-  /*  display:none; */
+    display:none; 
     margin: 20px;
    
 }
@@ -75,14 +75,13 @@ h3{
     margin-top: 10px;
 }
 
-.candidate{
+#candidate1{
  
     width: 50;
-    
-
-  
-    
-
+}
+#candidate2{
+ 
+    width: 50;
 }
 
 img{
@@ -93,4 +92,8 @@ img{
    
     width: 500px;
     display: flex;
+}
+
+div{
+    color: white;
 }

@@ -37,7 +37,7 @@ function mu(){
         var op = document.createElement('option');
         var s = nmult * i;
         
-        op.text =  `${nmult} x ${i} e igual a ${s}`;
+        op.text =  `${nmult} x ${i} = ${s}`;
         a.appendChild(op)
     }
     }
@@ -138,12 +138,14 @@ function div(){
 }
 
 function show2(){
-    var a = window.document.getElementById('hidden2');
+    var a = window.document.getElementById('candidate1');
+    var aa = window.document.getElementById('candidate2');
     var b = window.document.getElementById('voter').value.length;
     if (b != 5 ){
         window.alert('Please enter a valid voter registration!');
     } else {
        a.style.display  = 'block';
+       aa.style.display  = 'block';
       
     }
 }
@@ -168,15 +170,18 @@ function atkGoblin(){
     var life = window.document.getElementById('hpgoblin');
     var dmg = window.document.getElementById('damage');
     var imgg = window.document.getElementById('imggoblin');
+    var gsays = window.document.getElementById('gsays');
     var atk = Math.floor(Math.random() * 10);
     lf = lf - atk;
   
-    life.innerText = lf;
-    dmg.innerText = atk;
+    life.innerText = `Goblin's HP = ${lf}`;
+    dmg.innerText = `You damaged ${atk}`;
 if(lf<20 && lf> 0){
-    imgg.src = 'img/goblin1'; 
+    imgg.src = 'img/goblin1.jpg'; 
+    gsays.innerText = 'OH NO! I WILL SHOW YOU MY TRUE POWER';
 }else if(lf <=0){
-    imgg.src = 'img/goblin2';
+    imgg.src = 'img/goblin2.png';
+    gsays.innerText = 'You.. were so stronger'
 }
     
 }
