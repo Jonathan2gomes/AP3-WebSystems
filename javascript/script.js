@@ -181,7 +181,7 @@ if(lf<20 && lf> 0){
     gsays.innerText = 'OH NO! I WILL SHOW YOU MY TRUE POWER';
 }else if(lf <=0){
     imgg.src = 'img/goblin2.png';
-    gsays.innerText = 'You.. were so stronger'
+    gsays.innerText = 'You.. were so stronger';
 }
     
 }
@@ -189,14 +189,24 @@ if(lf<20 && lf> 0){
 function addToBck(){
     var b = window.document.getElementById('res8');
     var a = new Array();
+    var check = 0;
     for (var i =1; i<6; i++){
         a[i] = window.prompt(`Choose ${i}° item to carry`);
     }
     for (var j =1; j<6; j++){
         if( a[j] =="key"){
+            check = 1;
+        } 
+    }
+        if( check == 1){
             b.innerText = `That's great! You got a key`;
         } else {
             b.innerText = `You don't have a key`;
-        }
-    }
+}
+}
+
+let person = {
+    vreg: '12345',
+    vote1: false,
+    vote2: false,
 }
