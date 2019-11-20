@@ -151,12 +151,15 @@ function showcandidacts(){
        aa.style.display  = 'block';
        window.document.getElementById('vote2').style.display = 'inline';
        window.document.getElementById('vote1').style.display = 'inline';
+       window.document.getElementById('c1').src = 'img/sad.jpg';
+       window.document.getElementById('c2').src = 'img/sad1.jpg';
+
       
     }
 }
 vot1 = 0;
 function vt1(){
-    //window.alert('its working');
+ 
     var im = window.document.getElementById('c1');
     var resvt = window.document.getElementById('resvote');
     window.document.getElementById('vote1').style.display = 'none';
@@ -170,7 +173,7 @@ function vt1(){
 }
 vot2 = 0;
 function vt2(){
-    //window.alert('its working');
+   
     var im2 = window.document.getElementById('c2');
     var resvt = window.document.getElementById('resvote');
     window.document.getElementById('vote2').style.display = 'none';
