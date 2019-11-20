@@ -155,6 +155,8 @@ function showcandidacts(){
        window.document.getElementById('c2').src = 'img/sad1.jpg';
 
       
+    }if(vot2+vot1 == 10){ 
+
     }
 }
 vot1 = 0;
@@ -167,7 +169,7 @@ function vt1(){
     resvt.innerText = vot1;
     im.src = 'img/happy.jpg';
     aa.style.display = 'none';
-    a.style.margin = 'auto'
+    a.style.margin = 'auto';
 
     
 }
@@ -186,6 +188,7 @@ function vt2(){
 }
 
 function calcVotes(){
+    tot = vo1 + vot2;
     
 }
 
@@ -238,8 +241,3 @@ function addToBck(){
 }
 }
 
-let person = {
-    vreg: '12345',
-    vote1: false,
-    vote2: false,
-}

@@ -82,14 +82,14 @@
 </div>
 </section>
 
-<h1> Question 5</h1>
+<!-- <h1> Question 5</h1>
 <section>
 <div id="layer">
-   <!-- <form id="calc"> --> 
+    <form id="calc"> 
         
         <h3 id="oi">Enter your voter registration with 5 digits </h3>  
        <input type="number" id="voter"> 
-       <input type="button" id="sort" value="Check" onclick="show2()">
+       <input type="button" id="sort" value="Check" onclick="showcandidacts()">
        
     
        <div class="hidden" id="hidden2"> 
@@ -108,6 +108,34 @@
         <div id="res4" class="hidden"><input type="button" onclick="calcVotes()">
         </div>  
 
+</section> -->
+
+<h1> Question 5</h1>
+<section>
+<div id="layer">
+   <!-- <form id="calc"> --> 
+        
+        <h3 id="oi">Enter your voter registration with 5 digits </h3>  
+       <input type="number" id="voter"> 
+       <input type="button" id="sort" value="Check" onclick="showcandidacts()">
+       
+    
+       <div class="hidden" id="hidden2"> 
+           <div class="hidden" id="candidate1">
+               <h3> Vote on Oswaldo </h3>
+               <img src="img/sad.jpg" class="imgbasic" id="c1"> <br>
+                <input type="button" class="btnvote" id="vote1" value="Vote" onclick="vt1()">
+           </div>
+           <div class="hidden" id="candidate2">
+           <h3> Vote on Pedro </h3>
+           <img src="img/sad1.jpg" class="imgbasic" id="c2"> <br>
+                <input type="button" class="btnvote" id="vote2" value="Vote" onclick="vt2()">
+                </div>
+           </div>
+                    <br>
+        <div id="resvote"></div>
+        </div>    
+    
 </section>
 
     
