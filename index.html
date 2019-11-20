@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="javascript/script.js"> </script>
+
 <header> 
     <h1> Question 1</h1>
 </header> 
@@ -84,8 +84,8 @@
 
 <h1> Question 5</h1>
 <section>
-<div id="layer"></div>
-    <form id="calc">
+<div id="layer">
+   <!-- <form id="calc"> --> 
         
         <h3 id="oi">Enter your voter registration with 5 digits </h3>  
        <input type="number" id="voter"> 
@@ -98,17 +98,16 @@
                <img src="img/sad.jpg" class="imgbasic" id="c1"> <br>
                 <input type="button" class="btnvote" id="vote1" value="Vote" onclick="vt1()">
            </div>
-           <div class="hidden" id="candidate2" id="c2">
+           <div class="hidden" id="candidate2">
            <h3> Vote on Pedro </h3>
-           <img src="img/sad1.jpg" class="imgbasic"> <br>
+           <img src="img/sad1.jpg" class="imgbasic" id="c2"> <br>
                 <input type="button" class="btnvote" id="vote2" value="Vote" onclick="vt2()">
                 </div>
            </div>
                     <br>
-        <div id="resvote">asdf</div>
+        <div id="resvote"></div>
         </div>    
-    </form>
-</div>
+    
 </section>
 
     
@@ -117,7 +116,7 @@
 <div id="layer"></div>
     <form id="calc">
         
-        <h3 id="oi">Enter temperature in fahrenheitt</h3>  
+        <h3 id="oi">Enter temperature in Fahrenheit</h3>  
        <input type="number" id="temp"> 
        <input type="button" class="btn" id="convert" value="Convert" onclick="convertTemp()">
     
@@ -159,6 +158,6 @@
     </form>
 
 </section>
-
+<script src="javascript/script.js"> </script>
 </body>
 </html>

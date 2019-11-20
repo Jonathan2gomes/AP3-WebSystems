@@ -149,6 +149,8 @@ function showcandidacts(){
     } else {
        a.style.display  = 'block';
        aa.style.display  = 'block';
+       window.document.getElementById('vote2').style.display = 'inline';
+       window.document.getElementById('vote1').style.display = 'inline';
       
     }
 }
@@ -157,11 +159,30 @@ function vt1(){
     //window.alert('its working');
     var im = window.document.getElementById('c1');
     var resvt = window.document.getElementById('resvote');
+    window.document.getElementById('vote1').style.display = 'none';
     vot1 ++;
     resvt.innerText = vot1;
     im.src = 'img/happy.jpg';
-    aa.style.display = 'none'
+    aa.style.display = 'none';
+    a.style.margin = 'auto'
 
+    
+}
+vot2 = 0;
+function vt2(){
+    //window.alert('its working');
+    var im2 = window.document.getElementById('c2');
+    var resvt = window.document.getElementById('resvote');
+    window.document.getElementById('vote2').style.display = 'none';
+    vot2 ++;
+    resvt.innerText = vot2;
+    im2.src = 'img/happy1.jpg';
+    a.style.display = 'none';
+    aa.style.margin = 'auto';
+
+}
+
+function calcVotes(){
     
 }
 
