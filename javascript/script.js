@@ -151,6 +151,8 @@ function showcandidacts(){
        aa.style.display  = 'block';
        window.document.getElementById('vote2').style.display = 'inline';
        window.document.getElementById('vote1').style.display = 'inline';
+       window.document.getElementById('c1').src = 'img/sad.jpg';
+       window.document.getElementById('c2').src = 'img/sad1.jpg';
       
     }
 }
@@ -164,7 +166,7 @@ function vt1(){
     resvt.innerText = vot1;
     im.src = 'img/happy.jpg';
     aa.style.display = 'none';
-    a.style.margin = 'auto'
+    a.style.margin = 'auto';
 
     
 }
@@ -191,7 +193,7 @@ function convertTemp(){
     
     var f = Number(window.document.getElementById('temp').value);
     var c =  ( ( f - 32 ) * 5 ) / 9
-    window.document.getElementById('res6').innerText = c.toFixed(2);
+    window.document.getElementById(`The temperature is ${c}°C `).innerText = c.toFixed(2);
 }
 
 
@@ -240,3 +242,29 @@ let person = {
     vote1: false,
     vote2: false,
 }
+pos = 0;
+function LimitPosition(){
+    var move = Number(window.document.getElementById('txtn').value);
+    if (pos + move > 100 || pos + move <0){
+        window.alert('Please, enter a valid position!');
+    } else {
+        pos += move;
+        window.document.getElementById('res9').innerText = `Your current position is ${pos}`;
+    }
+}
+/*
+p = 0;
+m = Number(window.document.getElementById('txtn').value);
+function LimitPosition(p, m){
+    return p + m;
+}
+
+
+function ex(){
+    if (LimitPosition(p, m) > 100 || LimitPosition(p, m)){
+        window.alert('Enter a valid position');
+
+    } else{
+        window.alert(LimitPosition);
+    }
+} */

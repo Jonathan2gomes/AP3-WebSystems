@@ -42,7 +42,7 @@
 
         <select name="numbers" id="resmult" size="11">
 
-        </select>
+        </select>      
     </form>
 </div>
 </section>
@@ -55,8 +55,8 @@
         <h3 id="oi">Click the button below to enter 10 numbers and sort them</h3>  
         <input type="button" id="sort" value="Enter Numbers" onclick="test()">
         <br>
-        <div id="tab2"></div>
-</form>
+        <div id="tab2"></div>    
+    </form>
 </div>
 </section>
 
@@ -77,10 +77,38 @@
         <input type="button" class="btn4" id="divi" value="Division" onclick="div()">
         <br>
         <div id="res4"></div>
-        </div>       
+        </div>         
     </form>
 </div>
 </section>
+
+<!-- <h1> Question 5</h1>
+<section>
+<div id="layer">
+    <form id="calc"> 
+        
+        <h3 id="oi">Enter your voter registration with 5 digits </h3>  
+       <input type="number" id="voter"> 
+       <input type="button" id="sort" value="Check" onclick="showcandidacts()">
+       
+    
+       <div class="hidden" id="hidden2"> 
+           <div class="hidden" id="candidate1">
+               <h3> Vote on Oswaldo from the Partido Saber</h3>
+               <img src="img/sad.jpg" class="imgbasic" id="c1"> <br>
+                <input type="button" class="btnvote" id="vote1" value="Vote" onclick="vt1()">
+           </div>
+           <div class="hidden" id="candidate2">
+           <h3> Vote on Pedro </h3>
+           <img src="img/sad1.jpg" class="imgbasic" id="c2"> <br>
+                <input type="button" class="btnvote" id="vote2" value="Vote" onclick="vt2()">
+                </div>
+           </div>
+        <br>
+        <div id="res4" class="hidden"><input type="button" onclick="calcVotes()">
+        </div>  
+
+</section> -->
 
 <h1> Question 5</h1>
 <section>
@@ -134,12 +162,12 @@
         <h3 id="gsays">You cannot defeat me! HAHHAHAHH</h3> 
         <img src="img/goblin.jpg" id="imggoblin" class="imgbasic">
         <div id="hpgoblin">Goblin's HP = 80</div> 
-        <div id="damage"></div>
+        <div id="damage"></div> 
        <input type="button" class="btn" id="atk" value="Attack" onclick="atkGoblin()">
     
         <br>
         <div id="res7"></div>
-    </form>
+</form>
 
 </section>
 
@@ -154,10 +182,25 @@
     
         <br>
         <div id="res8"></div>
-     
+    
     </form>
-
 </section>
+
+
+<h1> Question 9</h1>
+<section>
+<div id="layer"></div>
+    <form id="calc">
+        
+        <h3 id="oi">Enter a position to move your enemy</h3>  
+        <input type="number" id="txtn">
+        <input type="button" id="btnMove" value="Check Position" onclick="LimitPosition()">
+        <br>
+        <div id="res9"></div>    
+    </form>
+</div>
+</section>
+
 <script src="javascript/script.js"> </script>
 </body>
 </html>
