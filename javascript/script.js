@@ -252,5 +252,7 @@ function LimitPosition(){
     }
 }
 
-function
+function carta (){
+    this.naipe = pnaipe;
+}
 
