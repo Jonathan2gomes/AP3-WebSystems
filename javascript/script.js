@@ -194,10 +194,10 @@ function calcVotes(){
 
  
 function convertTemp(){
-    
+
     var f = Number(window.document.getElementById('temp').value);
-    var c =  ( ( f - 32 ) * 5 ) / 9
-    window.document.getElementById('res6').innerText = c.toFixed(2);
+    var c =  ( ( f - 32 ) * 5 ) / 9;
+    window.document.getElementById('res6').innerText = `The temperature is ${c.toFixed(2)}°C`;
 }
 
 
