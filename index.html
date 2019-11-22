@@ -176,7 +176,7 @@
         
         <h3 id="bckpck"> Dear adventurer, you must choose 5 essential items to carry in your backpack</h3> 
         <img src="img/backpack.jpg" id="imgbackpack" alt="Backpack">
-       <input type="button" class="btn" id="chooseItems" value="Choose Items 2" onclick="addToBck()">
+       <input type="button" class="btn" id="chooseItems" value="Choose Items" onclick="addToBck()">
     
         <br>
         <div id="res8"></div>
@@ -184,6 +184,21 @@
     </form>
 
 </section>
+
+<h1> Question 9</h1>
+<section>
+<div id="layer"></div>
+    <form id="calc">
+        
+        <h3 id="oi">Enter a position to move your enemy</h3>  
+        <input type="number" id="txtn">
+        <input type="button" id="btnMove" value="Check Position" onclick="LimitPosition()">
+        <br>
+        <div id="res9"></div>    
+    </form>
+</div>
+</section>
+
 <script src="javascript/script.js"> </script>
 </body>
 </html>

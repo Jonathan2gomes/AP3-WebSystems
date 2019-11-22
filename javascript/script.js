@@ -241,3 +241,16 @@ function addToBck(){
 }
 }
 
+pos = 0;
+function LimitPosition(){
+    var move = Number(window.document.getElementById('txtn').value);
+    if (pos + move > 100 || pos + move <0){
+        window.alert('Please, enter a valid position!');
+    } else {
+        pos += move;
+        window.document.getElementById('res9').innerText = `Your current position is ${pos}`;
+    }
+}
+
+function
+
