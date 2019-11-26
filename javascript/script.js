@@ -252,6 +252,21 @@ function LimitPosition(){
         window.document.getElementById('res9').innerText = `Your current position is ${pos}`;
     }
 }
+
+
+class carta {
+    constructor(pNumber, pSuit) {
+        this.pSuit = suits['&clubs', '&diams', '&hearts', '&spades'];
+        this.pNumber = numbers['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'A', 'J', 'Q', 'K'];
+        
+        pSuit = suits[Math.floor(Math.random() * 4)];
+        pNumber = numbers[Math.floor(Math.random() * numbers.length)];
+    }
+        exibir(){ 
+        return this.pSuit + this.pNumber;
+    }
+
+}
 /*
 p = 0;
 m = Number(window.document.getElementById('txtn').value);
