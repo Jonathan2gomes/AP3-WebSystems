@@ -131,7 +131,9 @@
            <img src="img/sad1.jpg" class="imgbasic" id="c2"> <br>
                 <input type="button" class="btnvote" id="vote2" value="Vote" onclick="vt2()">
                 </div>
+
            </div>
+    <input type="button" id="btnresvt" value="Result" onclick="resvot()">
                     <br>
         <div id="resvote"></div>
         </div>    
@@ -201,17 +203,42 @@
 </div>
 </section>
 
-<h1> Question 10</h1>
+<h1> Question 10 & 11</h1>
 <section>
 <div id="layer"></div>
     <form id="calc">
         
-        <h3 id="oi"> Click to generate a deck of cards</h3>  
+        <h3 id="card"> Think of a deck of cards and click to see if it's your</h3>  
+        <div id="res10"></div> <br>
+        <input type="button" id="btnCard" value="Generate" onclick="generate()"> 
+        <div id="btnHide">  <input type="button" id="btnYes" value="Yes" onclick="yes()">
+            <input type="button" id="btnNo" value="No" onclick="generate()">
+           </div>                
+  </form>
+</div>
+</section>
+
+<h1> Question 12</h1>
+<section>
+<div id="layer"></div>
+    <form id="calc">
+        <h3 id="oi">Let's play JOKENPO</h3>
+        <div id="speak">Choose a move</div>
+        <div id="pcmove"> </div><br>
+
+        <a href="#footer" onclick="jokenpo('rock');"><img src="img/rock.png"> </a>
+        <a href="#footer" onclick="jokenpo('scissors');"><img src="img/scissors.png"></a>
+        <a href="#footer" onclick="jokenpo('paper');"><img src="img/paper.png"></a>
+
+
+
+<!--        <input type="button" id="btnRock" value="Rock" onclick="jokenpo()">-->
+<!--        <input type="button" id="btnPaper" value="paper" onclick="jokenpo()">-->
+<!--        <input type="button" id="btnScissors" value="scissors" onclick="jokenpo()">-->
         
-        <input type="button" id="btnCard" value="Generate" onclick="exibir()">
-        
-        <br>
-        <div id="res10"></div>    
+        <div id="scorep">You: 0</div>
+
+        <div id="scorepc">PC: 0</div>
     </form>
 </div>
 </section>

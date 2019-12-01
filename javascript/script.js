@@ -140,8 +140,9 @@ function div(){
 function showcandidacts(){ 
      a = window.document.getElementById('candidate1');
      aa = window.document.getElementById('candidate2');
-    var b = window.document.getElementById('voter').value.length;
-    
+     b = window.document.getElementById('voter').value.length;
+
+    btnres = window.document.getElementById('btnresvt');
     if (b != 5 ){
         window.alert('Please enter a valid voter registration!');
         a.style.display  = 'none';
@@ -153,47 +154,52 @@ function showcandidacts(){
        window.document.getElementById('vote1').style.display = 'inline';
        window.document.getElementById('c1').src = 'img/sad.jpg';
        window.document.getElementById('c2').src = 'img/sad1.jpg';
-      
+
+        if((vot1 + vot2) >= 5){
+            window.document.getElementById('btnresvt').style.display = 'flex';
+        }
+
     }
 }
 vot1 = 0;
 function vt1(){
     //window.alert('its working');
     var im = window.document.getElementById('c1');
-    var resvt = window.document.getElementById('resvote');
     window.document.getElementById('vote1').style.display = 'none';
     vot1 ++;
-    resvt.innerText = vot1;
     im.src = 'img/happy.jpg';
     aa.style.display = 'none';
     a.style.margin = 'auto';
-
-    
 }
 vot2 = 0;
 function vt2(){
     //window.alert('its working');
     var im2 = window.document.getElementById('c2');
-    var resvt = window.document.getElementById('resvote');
     window.document.getElementById('vote2').style.display = 'none';
     vot2 ++;
-    resvt.innerText = vot2;
     im2.src = 'img/happy1.jpg';
     a.style.display = 'none';
     aa.style.margin = 'auto';
-
 }
 
-function calcVotes(){
-    
+function resvot(){
+    if (vot1 > vot2){
+        window.document.getElementById('resvote').innerText = `Winner is Oswaldo with ${vot1} votes`;
+    }else{
+        window.document.getElementById('resvote').innerText = `Winner is Pedro with ${vot2} votes`;
+    } if (vot1 == vot2){
+        window.document.getElementById('resvote').innerText = 'Draw';
+    }
+
 }
 
  
 function convertTemp(){
     
     var f = Number(window.document.getElementById('temp').value);
-    var c =  ( ( f - 32 ) * 5 ) / 9
-    window.document.getElementById(`The temperature is ${c}°C `).innerText = c.toFixed(2);
+    var c =  ( ( f - 32 ) * 5 ) / 9;
+    
+    window.document.getElementById('res6').innerText = `The temperature is ${c.toFixed(2)}°C `;
 }
 
 
@@ -206,14 +212,16 @@ function atkGoblin(){
     var atk = Math.floor(Math.random() * 10);
     lf = lf - atk;
   
-    life.innerText = `Goblin's HP = ${lf}`;
-    dmg.innerText = `You damaged ${atk}`;
+    life.innerText = `Goblin's HP = ${lf}`;  
 if(lf<20 && lf> 0){
     imgg.src = 'img/goblin1.jpg'; 
     gsays.innerText = 'OH NO! I WILL SHOW YOU MY TRUE POWER';
 }else if(lf <=0){
     imgg.src = 'img/goblin2.png';
     gsays.innerText = 'You.. were so stronger';
+    life.innerText = `Goblin is dead`;
+    dmg.style.display = 'none';
+    window.document.getElementById('atk').style.display = 'none';
 }
     
 }
@@ -253,27 +261,93 @@ function LimitPosition(){
     }
 }
 
+var indexNumero = 0;
+var indexNaipe = 0;
 
-class carta {
-    constructor(pNumber, pSuit) {
-        this.pSuit = suits['&clubs', '&diams', '&hearts', '&spades'];
-        this.pNumber = numbers['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'A', 'J', 'Q', 'K'];
-        
-        pSuit = suits[Math.floor(Math.random() * 4)];
-        pNumber = numbers[Math.floor(Math.random() * numbers.length)];
-    }
-        exibir(){ 
-        return this.pSuit + this.pNumber;
-    }
+function generate(){
+    window.document.getElementById('btnCard').style.display = 'none';
+    window.document.getElementById('btnHide').style.display = 'inline';
+    window.document.getElementById('card').innerText = 'Is this your deck?';
+    
+
+    const naipes = ["♣", '♦', '♥', '♠'];
+    const numeros = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+    indexNumero = Math.floor(Math.random() * 13);
+    indexNaipe = Math.floor(Math.random() * 4);
+    const carta = new Carta(numeros[indexNumero],naipes[indexNaipe]).exibir();
+
+    window.document.getElementById('res10').innerText = carta;
+
 
 }
+function yes(){
+    window.document.getElementById('res10').innerText = "THAT'S GREAT!!! You found your card";
+    window.document.getElementById('btnHide').style.display = 'none';
+}
+
+
+class Carta {
+    constructor(pNumber, pSuit) {
+        this.pNumber = pNumber;
+        this.pSuit = pSuit;
+    }
+        exibir(){ 
+        return this.pNumber +' of ' +  this.pSuit;
+    }
+       
+
+}
+var pts = 0;
+var ptspc = 0;
+var indexMove = 0;
+var img = window.document.createElement("img");
+function jokenpo(move){
+
+     var movesPC = ['rock', 'scissors', 'paper'];
+     indexMove = Math.floor(Math.random() * 3);
+    //window.alert(move);
+
+    if (move == movesPC[indexMove]) {
+        window.document.getElementById('speak').innerText = `Tied round `;
+    }
+    else if (
+        (move == 'scissors' && movesPC[indexMove] == 'paper') ||
+        (move == 'rock' && movesPC[indexMove] == 'scissors') ||
+        (move == 'paper' && movesPC[indexMove] == 'rock')) {
+        window.document.getElementById('speak').innerText = `You won!!`;
+        pts++;
+    }else{
+        window.document.getElementById('speak').innerText = `You lost :( `;
+        ptspc++;
+    }
+
+if(movesPC[indexMove] == 'rock'){
+        document.getElementById('pcmove').appendChild(img).src = 'img/rock1.png';
+
+    }
+else if(movesPC[indexMove] == 'paper'){
+    document.getElementById('pcmove').appendChild(img).src  = 'img/paper1.png';
+    }
+else if(movesPC[indexMove] == 'scissors') {
+    document.getElementById('pcmove').appendChild(img).src  = 'img/scissors1.png';
+
+}
+    window.document.getElementById('scorep').innerText = `You: ${pts}`;
+    window.document.getElementById('scorepc').innerText = `PC: ${ptspc}`;
+    
+
+}
+
+
+
 /*
 p = 0;
 m = Number(window.document.getElementById('txtn').value);
 function LimitPosition(p, m){
     return p + m;
 }
-
+  
 
 function ex(){
     if (LimitPosition(p, m) > 100 || LimitPosition(p, m)){
